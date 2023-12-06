@@ -20,6 +20,7 @@
   "license": "ISC",
   "dependencies": {
     "@dynatrace-sdk/app-environment": "1.0.1",
+    "@dynatrace-sdk/client-classic-environment-v2": "^1.4.0",
     "@dynatrace-sdk/client-query": "1.4.3",
     "@dynatrace-sdk/error-handlers": "1.1.1",
     "@dynatrace-sdk/navigation": "1.0.1",
@@ -30,13 +31,13 @@
     "react-router-dom": "^6.4.1"
   },
   "devDependencies": {
-    "dt-app": "0.107.4",
     "@microsoft/eslint-plugin-sdl": "^0.2.0",
     "@types/node": "^16.11.34",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^5.23.0",
     "@typescript-eslint/parser": "^5.23.0",
+    "dt-app": "0.107.4",
     "eslint": "^8.15.0",
     "eslint-plugin-no-secrets": "^0.8.9",
     "eslint-plugin-react": "^7.29.4",

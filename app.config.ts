@@ -4,10 +4,10 @@ const config: CliOptions = {
   environmentUrl: 'https://xle26845.sprint.apps.dynatracelabs.com/',
   app: {
     name: 'entity-selector-architect',
-    version: '0.0.0',
-    description: 'A starting project with routing, fetching data, and charting',
+    version: '1.0.0',
+    description: 'Assisted building and preview of entity selectors',
     id: 'my.entity.selector.architect',
-    scopes: [{ name: 'storage:logs:read', comment: 'default template' }, { name: 'storage:buckets:read', comment: 'default template' }]
+    scopes: [{ name: 'storage:entities:read', comment: 'Read Environment Entities via DQL'}, { name: 'environment-api:entities:read', comment: 'Read Environment Entities via API'}]
   },
 };
 
