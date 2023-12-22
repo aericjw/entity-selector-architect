@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Flex, Heading, Paragraph, Strong, useCurrentTheme, Container, Select, SelectedKeys, SelectOption, TextInput } from "@dynatrace/strato-components-preview";
+import { Flex, Heading, Paragraph, Strong, useCurrentTheme, Container, SelectV2, SelectV2SingleValue, SelectOption, TextInput } from "@dynatrace/strato-components-preview";
 import { Card } from "../components/Card";
 import { getEntityTypes } from "../dt-api/getEntityTypes";
 import { getEntityTypeProperties } from "../dt-api/getEntityTypeProperties";
@@ -12,12 +12,12 @@ interface EntityTypeDropdownOption {
 export const Home = () => {
   const theme = useCurrentTheme();
   
-  const [selectedEntityType, setSelectedEntityType] = useState<SelectedKeys | null>(null)
+  const [selectedEntityType, setSelectedEntityType] = useState<SelectV2SingleValue<String> | null>(null)
   const [entityTypes, setEntityTypes] = useState<EntityTypeDropdownOption[]>([])
 
   const [entityName, setEntityName] = useState<string>("")
 
-  const [selectedProperty, setSelectedProperty] = useState<SelectedKeys | null>(null)
+  const [selectedProperty, setSelectedProperty] = useState<SelectV2SingleValue<String> | null>(null)
   const [properties, setProperties] = useState<EntityTypeDropdownOption[]>([])
 
   useEffect(() => {
@@ -53,21 +53,21 @@ export const Home = () => {
   return (
     <Flex flexDirection="column" alignItems="center" padding={32}>
       <Container as={Flex} width="100%">
-        <Select selectedId={selectedEntityType} onChange={setSelectedEntityType}>
+        <SelectV2 value={selectedEntityType} onChange={setSelectedEntityType}>
           {entityTypes.map((option) => (
             <SelectOption id={option.id} key={option.id}>
               {option.text}
             </SelectOption>
           ))}
-        </Select>
+        </SelectV2>
         <TextInput value={entityName} onChange={setEntityName} placeholder="Entity Name"/>
-        <Select selectedId={selectedProperty} onChange={setSelectedProperty}>
+        <SelectV2 value={selectedProperty} onChange={setSelectedProperty}>
           {properties.map((option) => (
             <SelectOption id={option.id} key={option.id}>
               {option.text}
             </SelectOption>
           ))}
-        </Select>
+        </SelectV2>
       </Container>
 
       <Container as={Flex} width="100%" alignItems="center" flexDirection="column" variant="accent">
