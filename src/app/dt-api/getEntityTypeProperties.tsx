@@ -19,7 +19,7 @@ export async function getEntityTypeProperties(type:string) {
             console.log(stringProperties)
         })
     } catch (e) {
-        error = JSON.parse(e.message)?.error;
+        error = e.message.error;
         stringProperties = undefined
     }
 

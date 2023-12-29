@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "declaration": true,
     "emitDecoratorMetadata": true,

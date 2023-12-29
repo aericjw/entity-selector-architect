@@ -10,7 +10,7 @@ export async function getEntityTypes() {
             entityTypes = res.types
         })
     } catch (e) {
-        error = JSON.parse(e.message)?.error;
+        error = e.message.error;
         entityTypes = undefined
     }
 
