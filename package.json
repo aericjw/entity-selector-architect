@@ -27,6 +27,7 @@
     "@dynatrace-sdk/navigation": "1.0.1",
     "@dynatrace-sdk/user-preferences": "1.1.0",
     "@dynatrace/strato-components-preview": "0.109.3",
+    "npm": "^10.2.5",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-router-dom": "^6.4.1"
