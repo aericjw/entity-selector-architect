@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { Flex, useCurrentTheme} from "@dynatrace/strato-components-preview";
 import { EntitySelectorBuilder } from "../components/EntitySelectorBuilder"
 
